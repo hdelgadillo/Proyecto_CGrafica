@@ -93,6 +93,7 @@ CTexture text6;	//Casa01
 CTexture text7;//torre roja
 CTexture text8;//torre blanca
 CTexture text9;//torre azul
+CTexture text10;//torre azul
 
 
 				//NEW///////////////////////////7
@@ -527,7 +528,15 @@ void parque()
 	glPopMatrix();
 
 
+	//MUNDO 
+	
+	glPushMatrix();
+	glTranslatef(0, 32, 0);
+	glRotatef(360, 0, 1, 0);
 
+	fig8.esfera(5, 100, 100, text10.GLindex);
+
+	glPopMatrix();
 
 
 }
@@ -615,6 +624,10 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text9.BuildGLTexture();
 	text9.ReleaseImage();
 	 
+	text10.LoadTGA("mundo.tga");
+	text10.BuildGLTexture();
+	text10.ReleaseImage();
+
 
 	//NEW////////////////////////////////////////////
 
