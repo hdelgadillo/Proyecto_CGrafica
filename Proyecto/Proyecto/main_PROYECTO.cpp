@@ -90,6 +90,9 @@ CTexture text3;	//Flecha
 CTexture text4;	//Pavimento
 CTexture text5;	//Pasto01
 CTexture text6;	//Casa01
+CTexture text7;//torre roja
+CTexture text8;//torre blanca
+CTexture text9;//torre azul
 
 
 				//NEW///////////////////////////7
@@ -111,6 +114,9 @@ CFiguras fig4;	//Pasto01
 CFiguras fig5;	//Casa01
 CFiguras fig6;
 CFiguras fig7;	//Para crear Monito
+CFiguras fig8;//torre roja
+CFiguras fig9;//torre blanca
+CFiguras fig10;//torre azul
 
 
 void saveFrame(void)
@@ -159,6 +165,355 @@ void interpolation(void)
 
 }
 
+void torreroja(void) {
+
+	glPushMatrix();
+glPushMatrix();
+	glTranslatef(0.0, 1.85, 0.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+	glTranslatef(0.0, 1.25, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+    glTranslatef(0.0, 1.85, 0.75);
+	glRotatef(0, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+	glTranslatef(0.0, 2.475, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+    glTranslatef(0.635, 1.25, 0.75);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+    glTranslatef(0.635, 1.25, 0.0);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+	glTranslatef(1.25, 1.25, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+	glTranslatef(1.25, 1.85, 0.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+	glTranslatef(1.25, 1.85, 0.75);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+	glTranslatef(1.25, 2.475, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+    glTranslatef(0.635,2.475, 0.0);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+    glTranslatef(0.635, 2.475, 0.75);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(0.635, 1.80, 0.75);
+glRotatef(45, 0, 0, 1);
+glScalef(0.25, 1.45, .25);
+glDisable(GL_LIGHTING);
+fig3.prisma2(text7.GLindex, text7.GLindex);
+glEnable(GL_LIGHTING);
+glPopMatrix();
+glPushMatrix();
+    glTranslatef(0.635,1.80, 0.0);
+	glRotatef(45, 0, 0, 1);
+	glScalef(0.25, 1.45, .25);
+	glDisable(GL_LIGHTING);
+	fig3.prisma2(text7.GLindex, text7.GLindex);
+	glEnable(GL_LIGHTING);
+glPopMatrix();
+	glPopMatrix();
+
+}
+
+void torreblanca(void) {
+
+	glPushMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 1.85, 0.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 1.25, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 1.85, 0.75);
+	glRotatef(0, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 2.475, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 1.25, 0.75);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);;
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 1.25, 0.0);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(1.25, 1.25, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(1.25, 1.85, 0.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(1.25, 1.85, 0.75);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(1.25, 2.475, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 2.475, 0.0);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 2.475, 0.75);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.635, 1.80, 0.75);
+	glRotatef(45, 0, 0, 1);
+	glScalef(0.25, 1.45, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 1.80, 0.0);
+	glRotatef(45, 0, 0, 1);
+	glScalef(0.25, 1.45, .25);
+	glDisable(GL_LIGHTING);
+	fig8.prisma2(text8.GLindex, text8.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPopMatrix();
+
+}
+void torreazul(void) {
+
+	glPushMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 1.85, 0.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 1.25, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 1.85, 0.75);
+	glRotatef(0, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 2.475, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 1.25, 0.75);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 1.25, 0.0);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(1.25, 1.25, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(1.25, 1.85, 0.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(1.25, 1.85, 0.75);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(1.25, 2.475, 0.38);
+	glRotatef(180, 0.0, 1.0, 1.0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 2.475, 0.0);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 2.475, 0.75);
+	glRotatef(180, 1, 1, 0);
+	glScalef(0.25, 1, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.635, 1.80, 0.75);
+	glRotatef(45, 0, 0, 1);
+	glScalef(0.25, 1.45, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.635, 1.80, 0.0);
+	glRotatef(45, 0, 0, 1);
+	glScalef(0.25, 1.45, .25);
+	glDisable(GL_LIGHTING);
+	fig10.prisma2(text9.GLindex, text9.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glPopMatrix();
+
+}
 
 void parque()
 {
@@ -196,6 +551,7 @@ GLuint createDL()
 	// call the function that contains 
 	// the rendering commands
 	parque();
+	
 	//monito();
 	// endList
 	glEndList();
@@ -229,7 +585,7 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text1.BuildGLTexture();
 	text1.ReleaseImage();
 
-	
+
 
 	text3.LoadTGA("city/arrow.tga");
 	text3.BuildGLTexture();
@@ -247,6 +603,18 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text6.BuildGLTexture();
 	text6.ReleaseImage();
 
+	text7.LoadTGA("texturas/skyscreamer/fondorojo.tga");
+	text7.BuildGLTexture();
+	text7.ReleaseImage();
+
+	text8.LoadTGA("texturas/skyscreamer/metalblanco.tga");
+	text8.BuildGLTexture();
+	text8.ReleaseImage();
+
+	text9.LoadTGA("texturas/skyscreamer/metalazul.tga");
+	text9.BuildGLTexture();
+	text9.ReleaseImage();
+	 
 
 	//NEW////////////////////////////////////////////
 
@@ -314,26 +682,142 @@ void display(void)   // Creamos la funcion donde se dibuja
 	fig1.skybox(200.0, 130.0, 200.0, text1.GLindex);
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
+	
+	
 
 	glPushMatrix();
 	glEnable(GL_COLOR_MATERIAL);
 	glColor3f(1, 1, 1);
 	//glScalef(0.5, 0.5, 0.5);
 	//monito();
+	
+	
 	glCallList(ciudad_display_list);
 	glTranslatef(posX, posY, posZ);
 	glRotatef(giroMonito, 0, 1, 0);
 
 	glDisable(GL_COLOR_MATERIAL);
 	glPopMatrix();
-
-
-
 	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	glColor3f(1.0, 1.0, 1.0);
+
+	//aqui empieza torre
+	glPushMatrix();
+	glPushMatrix();
+	torreroja();
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 1.2, 0.0);
+	torreroja();
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 2.4, 0.0);
+	torreroja();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 3.6, 0.0);
+	torreroja();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 4.8, 0.0);
+	torreroja();
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 6, 0.0);
+	torreroja();
+	glPopMatrix();
+	//torre blanca
+	glPushMatrix();
+	glTranslatef(0.0, 7.5, 0.0);
+	torreblanca();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 8.7, 0.0);
+	torreblanca();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 9.9, 0.0);
+	torreblanca();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 11.1, 0.0);
+	torreblanca();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 12.3, 0.0);
+	torreblanca();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 13.5, 0.0);
+	torreblanca();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 14.7, 0.0);
+	torreblanca();
+	glPopMatrix();
+	//torre azul
+
+	glPushMatrix();
+	glTranslatef(0.0, 16.2, 0.0);
+	torreazul();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 17.7, 0.0);
+	torreazul();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 19.2, 0.0);
+	torreazul();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 20.7, 0.0);
+	torreazul();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 22.2, 0.0);
+	torreazul();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 23.7, 0.0);
+	torreazul();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0, 25.2, 0.0);
+	torreazul();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.0,23.7, 0.0);
+	torreazul();
+	glPopMatrix();
+	
+	glPushMatrix();
+	glTranslatef(0.0,25.2, 0.0);
+	torreazul();
 	glPopMatrix();
 
 
-	glColor3f(1.0, 1.0, 1.0);
+	glPopMatrix();
+
+
+
+
+
 
 	glPopMatrix();
 	glPopMatrix();
