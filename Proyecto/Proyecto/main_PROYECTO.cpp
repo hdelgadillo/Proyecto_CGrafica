@@ -25,6 +25,11 @@ float giroMonito = 0;
 #define MAX_FRAMES 5
 int i_max_steps = 90;
 int i_curr_steps = 0;
+DWORD dwFrames = 0;
+DWORD dwCurrentTime = 0;
+DWORD dwLastUpdateTime = 0;
+DWORD dwElapsedTime = 0;
+int juego;
 
 typedef struct _frame
 {
@@ -94,15 +99,10 @@ CTexture text7;//torre roja
 CTexture text8;//torre blanca
 CTexture text9;//torre azul
 CTexture text10;//torre azul
+CTexture text11;// estrellas
 
 
 				//NEW///////////////////////////7
-
-
-
-
-
-
 
 
 float abrirPuerta = 0;
@@ -118,6 +118,7 @@ CFiguras fig7;	//Para crear Monito
 CFiguras fig8;//torre roja
 CFiguras fig9;//torre blanca
 CFiguras fig10;//torre azul
+CFiguras fig11;//estrellas
 
 
 void saveFrame(void)
@@ -530,13 +531,7 @@ void parque()
 
 	//MUNDO 
 	
-	glPushMatrix();
-	glTranslatef(0, 32, 0);
-	glRotatef(360, 0, 1, 0);
-
-	fig8.esfera(5, 100, 100, text10.GLindex);
-
-	glPopMatrix();
+	
 
 
 }
@@ -628,6 +623,10 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text10.BuildGLTexture();
 	text10.ReleaseImage();
 
+	text11.LoadTGA("texturas/skyscreamer/estrellas.tga");
+	text11.BuildGLTexture();
+	text11.ReleaseImage();
+
 
 	//NEW////////////////////////////////////////////
 
@@ -695,16 +694,16 @@ void display(void)   // Creamos la funcion donde se dibuja
 	fig1.skybox(200.0, 130.0, 200.0, text1.GLindex);
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
-	
-	
+
+
 
 	glPushMatrix();
 	glEnable(GL_COLOR_MATERIAL);
 	glColor3f(1, 1, 1);
 	//glScalef(0.5, 0.5, 0.5);
 	//monito();
-	
-	
+
+
 	glCallList(ciudad_display_list);
 	glTranslatef(posX, posY, posZ);
 	glRotatef(giroMonito, 0, 1, 0);
@@ -717,6 +716,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 
 	//aqui empieza torre
 	glPushMatrix();
+	glTranslatef(0,0,70);
 	glPushMatrix();
 	torreroja();
 	glPopMatrix();
@@ -815,14 +815,89 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glPopMatrix();
 
 	glPushMatrix();
-	glTranslatef(0.0,23.7, 0.0);
+	glTranslatef(0.0, 23.7, 0.0);
 	torreazul();
 	glPopMatrix();
-	
+
 	glPushMatrix();
-	glTranslatef(0.0,25.2, 0.0);
+	glTranslatef(0.0, 25.2, 0.0);
 	torreazul();
 	glPopMatrix();
+// mundo
+	glPushMatrix();
+	glTranslatef(0.5, 29, .5);
+	glRotatef(360, 0, 1, 0);
+
+	fig8.esfera(1.5, 100, 100, text10.GLindex);
+
+	glPopMatrix();
+	//conos con estrellas 
+glPushMatrix();
+glPushMatrix();
+glTranslatef(.6, 24,1.5);
+glRotatef(90, 0, 0, 1);
+glRotatef(90, 1, 0, 0);
+fig11.cono(2,.5,100,text11.GLindex);
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(2, 24, .6);
+glRotatef(90, 0, 0, 1);
+glRotatef(145, 1, 0, 0);
+fig11.cono(2, .5, 100, text11.GLindex);
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(1.8, 24, -.3);
+glRotatef(90, 0, 0, 1);
+glRotatef(200, 1, 0, 0);
+fig11.cono(2, .5, 100, text11.GLindex);
+glPopMatrix();
+
+glPushMatrix();
+
+glTranslatef(0.4, 24, -1);
+glRotatef(90, 0, 0, 1);
+glRotatef(255, 1, 0, 0);
+fig11.cono(2, .5, 100, text11.GLindex);
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-.4, 24, -.5);
+glRotatef(90, 0, 0, 1);
+glRotatef(310, 1, 0, 0);
+fig11.cono(2, .5, 100, text11.GLindex);
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-.9, 24, .9);
+glRotatef(90, 0, 0, 1);
+glRotatef(365, 1, 0, 0);
+fig11.cono(2, .5, 100, text11.GLindex);
+glPopMatrix();
+
+
+
+glPushMatrix();
+
+glRotatef(juego, 0, 1, 0);
+glTranslatef(-1, 24, -1.75);
+glScalef(3.5, 0, 7);
+glPushMatrix();
+glTranslatef(0.0, 1.25, 0.38);
+glRotatef(180, 0.0, 1.0, 1.0);
+glScalef(0.25, 1, .25);
+glDisable(GL_LIGHTING);
+fig10.torus(2,2,100,100);
+glEnable(GL_LIGHTING);
+glPopMatrix();
+
+
+
+glPopMatrix();
+
+
+
 
 
 	glPopMatrix();
@@ -849,6 +924,21 @@ void display(void)   // Creamos la funcion donde se dibuja
 
 void animacion()
 {
+
+	// Calculate the number of frames per one second:
+	//dwFrames++;
+	dwCurrentTime = GetTickCount(); // Even better to use timeGetTime()
+	dwElapsedTime = dwCurrentTime - dwLastUpdateTime;
+
+	if (dwElapsedTime >= 30)
+	{
+		juego = (juego - 5) % 360;
+		
+
+
+		dwLastUpdateTime = dwCurrentTime;
+	}
+
 	fig3.text_izq -= 0.001;
 	fig3.text_der -= 0.001;
 	if (fig3.text_izq<-1)
