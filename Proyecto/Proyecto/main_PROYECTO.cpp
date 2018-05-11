@@ -102,6 +102,7 @@ CTexture text9;//torre azul
 CTexture text10;//torre azul
 CTexture text11;// estrellas
 CTexture text12;//cadenas
+CTexture text13;//silla amarilla
 
 
 				//NEW///////////////////////////7
@@ -121,7 +122,9 @@ CFiguras fig8;//torre roja
 CFiguras fig9;//torre blanca
 CFiguras fig10;//torre azul
 CFiguras fig11;//estrellas
-CFiguras fig12;
+CFiguras fig12;//cadenas
+CFiguras fig13;//silla amarilla
+
 
 void saveFrame(void)
 {
@@ -402,6 +405,25 @@ void torreblanca(void) {
 	glPopMatrix();
 
 }
+
+void silla(void) {
+
+	glPushMatrix();
+	glTranslatef(0, .015, 0);
+	glScalef(1,.01,1);
+	fig13.prisma2(text13.GLindex,text13.GLindex);
+
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0, 0, -.4);
+	glRotatef(90, 1, 0, 0);
+	glScalef(1, .01, .07);
+	fig13.prisma2(text13.GLindex, text13.GLindex);
+	glPopMatrix();
+
+	
+
+}
 void torreazul(void) {
 
 	glPushMatrix();
@@ -633,6 +655,10 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text12.BuildGLTexture();
 	text12.ReleaseImage();
 
+	text13.LoadTGA("texturas/skyscreamer/plasticoamarillo.tga");
+	text13.BuildGLTexture();
+	text13.ReleaseImage();
+
 
 	//NEW////////////////////////////////////////////
 
@@ -841,7 +867,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glPushMatrix();
 	glTranslatef(.5, 0, .4);
 	glScalef(2, 1, 2);
-	glRotatef(juego, 0, 1, 0);
+glRotatef(-juego, 0, 1, 0);
 
 	glPushMatrix();
 	glTranslatef(-0, 24, 0);
@@ -857,10 +883,14 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glScalef(.04, 1, .04);
 	fig12.cilindro(1, 6, 100, text12.GLindex);
 	glDisable(GL_ALPHA_TEST);
+	//silla
+	glPushMatrix();
+	glScalef(6, 6, 6);
+	glTranslatef(0,1, .5);
+	silla();
 	glPopMatrix();
 
-
-
+	glPopMatrix();
 	glPopMatrix();
 
 	glPushMatrix();
@@ -877,6 +907,12 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glScalef(.04, 1, .04);
 	fig12.cilindro(1, 6, 100, text12.GLindex);
 	glDisable(GL_ALPHA_TEST);
+	//silla
+	glPushMatrix();
+	glScalef(6, 6, 6);
+	glTranslatef(0, 1, .5);
+	silla();
+	glPopMatrix();
 	glPopMatrix();
 	glPopMatrix();
 
@@ -896,6 +932,12 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glScalef(.04, 1, .04);
 	fig12.cilindro(1, 6, 100, text12.GLindex);
 	glDisable(GL_ALPHA_TEST);
+	//silla
+	glPushMatrix();
+	glScalef(6, 6, 6);
+	glTranslatef(0, 1, .5);
+	silla();
+	glPopMatrix();
 	glPopMatrix();
 
 	glPopMatrix();
@@ -914,6 +956,12 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glScalef(.04, 1, .04);
 	fig12.cilindro(1, 6, 100, text12.GLindex);
 	glDisable(GL_ALPHA_TEST);
+	//silla
+	glPushMatrix();
+	glScalef(6, 6, 6);
+	glTranslatef(0, 1, .5);
+	silla();
+	glPopMatrix();
 	glPopMatrix();
 	glPopMatrix();
 
@@ -931,6 +979,12 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glScalef(.04, 1, .04);
 	fig12.cilindro(1, 6, 100, text12.GLindex);
 	glDisable(GL_ALPHA_TEST);
+	//silla
+	glPushMatrix();
+	glScalef(6, 6, 6);
+	glTranslatef(0, 1, .5);
+	silla();
+	glPopMatrix();
 	glPopMatrix();
 	glPopMatrix();
 
@@ -948,6 +1002,12 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glScalef(.04, 1, .04);
 	fig12.cilindro(1, 6, 100, text12.GLindex);
 	glDisable(GL_ALPHA_TEST);
+	//silla
+	glPushMatrix();
+	glScalef(6, 6, 6);
+	glTranslatef(0, 1, .5);
+	silla();
+	glPopMatrix();
 	glPopMatrix();
 
 	glPopMatrix();
@@ -964,22 +1024,19 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glTranslatef(0, 2, 0);
 	glRotatef(65, 0, 0, 1);
 	glScalef(.04, 1, .04);
-	fig12.cilindro(1, 6, 100, 0);
+	fig12.cilindro(1, 6, 100, text12.GLindex);
 	glDisable(GL_ALPHA_TEST);
+	//silla
+	glPushMatrix();
+	glScalef(6, 6, 6);
+	glTranslatef(0, 1, .5);
+	silla();
+	glPopMatrix();
 		glPopMatrix();
 	glPopMatrix();
-
-	//base de giro
-
 	
 
-
-
 glPopMatrix();
-
-
-
-
 
 
 
