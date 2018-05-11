@@ -30,6 +30,7 @@ DWORD dwCurrentTime = 0;
 DWORD dwLastUpdateTime = 0;
 DWORD dwElapsedTime = 0;
 int juego;
+int juego1;
 
 typedef struct _frame
 {
@@ -100,6 +101,7 @@ CTexture text8;//torre blanca
 CTexture text9;//torre azul
 CTexture text10;//torre azul
 CTexture text11;// estrellas
+CTexture text12;//cadenas
 
 
 				//NEW///////////////////////////7
@@ -119,7 +121,7 @@ CFiguras fig8;//torre roja
 CFiguras fig9;//torre blanca
 CFiguras fig10;//torre azul
 CFiguras fig11;//estrellas
-
+CFiguras fig12;
 
 void saveFrame(void)
 {
@@ -627,6 +629,10 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text11.BuildGLTexture();
 	text11.ReleaseImage();
 
+	text12.LoadTGA("texturas/skyscreamer/cadena.tga");
+	text12.BuildGLTexture();
+	text12.ReleaseImage();
+
 
 	//NEW////////////////////////////////////////////
 
@@ -716,7 +722,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 
 	//aqui empieza torre
 	glPushMatrix();
-	glTranslatef(0,0,70);
+	glTranslatef(0, 0, 70);
 	glPushMatrix();
 	torreroja();
 	glPopMatrix();
@@ -823,7 +829,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glTranslatef(0.0, 25.2, 0.0);
 	torreazul();
 	glPopMatrix();
-// mundo
+	// mundo
 	glPushMatrix();
 	glTranslatef(0.5, 29, .5);
 	glRotatef(360, 0, 1, 0);
@@ -832,75 +838,145 @@ void display(void)   // Creamos la funcion donde se dibuja
 
 	glPopMatrix();
 	//conos con estrellas 
-glPushMatrix();
-glPushMatrix();
-glTranslatef(.6, 24,1.5);
-glRotatef(90, 0, 0, 1);
-glRotatef(90, 1, 0, 0);
-fig11.cono(2,.5,100,text11.GLindex);
-glPopMatrix();
+	glPushMatrix();
+	glTranslatef(.5, 0, .4);
+	glScalef(2, 1, 2);
+	glRotatef(juego, 0, 1, 0);
 
-glPushMatrix();
-glTranslatef(2, 24, .6);
-glRotatef(90, 0, 0, 1);
-glRotatef(145, 1, 0, 0);
-fig11.cono(2, .5, 100, text11.GLindex);
-glPopMatrix();
-
-glPushMatrix();
-glTranslatef(1.8, 24, -.3);
-glRotatef(90, 0, 0, 1);
-glRotatef(200, 1, 0, 0);
-fig11.cono(2, .5, 100, text11.GLindex);
-glPopMatrix();
-
-glPushMatrix();
-
-glTranslatef(0.4, 24, -1);
-glRotatef(90, 0, 0, 1);
-glRotatef(255, 1, 0, 0);
-fig11.cono(2, .5, 100, text11.GLindex);
-glPopMatrix();
-
-glPushMatrix();
-glTranslatef(-.4, 24, -.5);
-glRotatef(90, 0, 0, 1);
-glRotatef(310, 1, 0, 0);
-fig11.cono(2, .5, 100, text11.GLindex);
-glPopMatrix();
-
-glPushMatrix();
-glTranslatef(-.9, 24, .9);
-glRotatef(90, 0, 0, 1);
-glRotatef(365, 1, 0, 0);
-fig11.cono(2, .5, 100, text11.GLindex);
-glPopMatrix();
-
-
-
-glPushMatrix();
-
-glRotatef(juego, 0, 1, 0);
-glTranslatef(-1, 24, -1.75);
-glScalef(3.5, 0, 7);
-glPushMatrix();
-glTranslatef(0.0, 1.25, 0.38);
-glRotatef(180, 0.0, 1.0, 1.0);
-glScalef(0.25, 1, .25);
-glDisable(GL_LIGHTING);
-fig10.torus(2,2,100,100);
-glEnable(GL_LIGHTING);
-glPopMatrix();
-
-
-
-glPopMatrix();
-
-
+	glPushMatrix();
+	glTranslatef(-0, 24, 0);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(50, 1, 0, 0);
+	fig11.cono(2, .5, 100, text11.GLindex);
+	//cadena
+	glPushMatrix();
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0.1);
+	glTranslatef(0, 2, 0);
+	glRotatef(65, 0, 0, 1);
+	glScalef(.04, 1, .04);
+	fig12.cilindro(1, 6, 100, text12.GLindex);
+	glDisable(GL_ALPHA_TEST);
+	glPopMatrix();
 
 
 
 	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 24, 0);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(100, 1, 0, 0);
+	fig11.cono(2, .5, 100, text11.GLindex);
+	//cadena
+	glPushMatrix();
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0.1);
+	glTranslatef(0, 2, 0);
+	glRotatef(65, 0, 0, 1);
+	glScalef(.04, 1, .04);
+	fig12.cilindro(1, 6, 100, text12.GLindex);
+	glDisable(GL_ALPHA_TEST);
+	glPopMatrix();
+	glPopMatrix();
+
+
+
+	glPushMatrix();
+	glTranslatef(0, 24, 0);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(150, 1, 0, 0);
+	fig11.cono(2, .5, 100, text11.GLindex);
+	//cadena
+	glPushMatrix();
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0.1);
+		glTranslatef(0, 2, 0);
+	glRotatef(65, 0, 0, 1);
+	glScalef(.04, 1, .04);
+	fig12.cilindro(1, 6, 100, text12.GLindex);
+	glDisable(GL_ALPHA_TEST);
+	glPopMatrix();
+
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 24, 0);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(200, 1, 0, 0);
+	fig11.cono(2, .5, 100, text11.GLindex);
+	//cadena
+	glPushMatrix();
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0.1);
+	glTranslatef(0, 2, 0);
+	glRotatef(65, 0, 0, 1);
+	glScalef(.04, 1, .04);
+	fig12.cilindro(1, 6, 100, text12.GLindex);
+	glDisable(GL_ALPHA_TEST);
+	glPopMatrix();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 24, 0);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(250, 1, 0, 0);
+	fig11.cono(2, .5, 100, text11.GLindex);
+	//cadena
+	glPushMatrix();
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0.1);
+	glTranslatef(0, 2, 0);
+	glRotatef(65, 0, 0, 1);
+	glScalef(.04, 1, .04);
+	fig12.cilindro(1, 6, 100, text12.GLindex);
+	glDisable(GL_ALPHA_TEST);
+	glPopMatrix();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 24, 0);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(300, 1, 0, 0);
+	fig11.cono(2, .5, 100, text11.GLindex);
+	//cadena
+	glPushMatrix();
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0.1);
+	glTranslatef(0, 2, 0);
+	glRotatef(65, 0, 0, 1);
+	glScalef(.04, 1, .04);
+	fig12.cilindro(1, 6, 100, text12.GLindex);
+	glDisable(GL_ALPHA_TEST);
+	glPopMatrix();
+
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 24, 0);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(350, 1, 0, 0);
+	fig11.cono(2, .5, 100, text11.GLindex);
+	//cadena
+	glPushMatrix();
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0.1);
+	glTranslatef(0, 2, 0);
+	glRotatef(65, 0, 0, 1);
+	glScalef(.04, 1, .04);
+	fig12.cilindro(1, 6, 100, 0);
+	glDisable(GL_ALPHA_TEST);
+		glPopMatrix();
+	glPopMatrix();
+
+	//base de giro
+
+	
+
+
+
+glPopMatrix();
+
 
 
 
@@ -932,7 +1008,8 @@ void animacion()
 
 	if (dwElapsedTime >= 30)
 	{
-		juego = (juego - 5) % 360;
+		juego = (juego - 11) % 360;
+		juego1 = (juego1 - 1) % 360;
 		
 
 
