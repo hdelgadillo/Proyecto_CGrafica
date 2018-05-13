@@ -84,7 +84,7 @@ GLfloat Position2[] = { 0.0f, 0.0f, -5.0f, 1.0f };			// Light Position
 
 GLfloat m_dif1[] = { 0.0f, 0.2f, 1.0f, 1.0f };				// Diffuse Light Values
 GLfloat m_spec1[] = { 0.0, 0.0, 0.0, 1.0 };				// Specular Light Values
-GLfloat m_amb1[] = { 0.0, 0.0, 0.0, 1.0 };				// Ambiental Light Values
+GLfloat m_amb1[] = { 1, 1, 1, 1.0 };				// Ambiental Light Values
 GLfloat m_s1[] = { 18 };
 
 GLfloat m_dif2[] = { 0.8f, 0.2f, 0.0f, 1.0f };				// Diffuse Light Values
@@ -1251,7 +1251,7 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	glEnable(GL_NORMALIZE);
 
 
-	text1.LoadBMP("01.bmp");
+	text1.LoadBMP("sky.bmp");
 	text1.BuildGLTexture();
 	text1.ReleaseImage();
 
