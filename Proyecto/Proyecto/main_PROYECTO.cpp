@@ -115,6 +115,8 @@ CTexture text19;
 CTexture text20;
 CTexture text21;
 CTexture text22;
+CTexture text23;
+CTexture text24;
 
 				//NEW///////////////////////////7
 
@@ -144,7 +146,8 @@ CFiguras fig18;
 CFiguras fig19;
 CFiguras fig20;
 CFiguras fig21;
-
+CFiguras fig22;
+CFiguras fig23;
 
 void saveFrame(void)
 {
@@ -1956,7 +1959,7 @@ void baños(void)
 	glRotatef(90, 0, 1, 0);
 	glScalef(10, 0.1, 5);
 	glDisable(GL_LIGHTING);
-	fig21.prisma2(text22.GLindex, text22.GLindex);
+	fig22.prisma2(text23.GLindex, text23.GLindex);
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
 
@@ -2024,7 +2027,7 @@ void tienda3(void)
 	glRotatef(90, 0, 1, 0);
 	glScalef(10, 0.1, 5);
 	glDisable(GL_LIGHTING);
-	fig21.prisma2(text22.GLindex, text22.GLindex);
+	fig23.prisma3(text24.GLindex, text24.GLindex);
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
 
@@ -2174,6 +2177,14 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text22.LoadTGA("tienda2.tga");
 	text22.BuildGLTexture();
 	text22.ReleaseImage();
+
+	text23.LoadTGA("wc.tga");
+	text23.BuildGLTexture();
+	text23.ReleaseImage();
+
+	text24.LoadTGA("tienda3.tga");
+	text24.BuildGLTexture();
+	text24.ReleaseImage();
 	
 	//NEW////////////////////////////////////////////
 
