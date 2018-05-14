@@ -117,6 +117,7 @@ CTexture text21;
 CTexture text22;
 CTexture text23;
 CTexture text24;
+CTexture text25;
 
 				//NEW///////////////////////////7
 
@@ -148,7 +149,8 @@ CFiguras fig20;
 CFiguras fig21;
 CFiguras fig22;
 CFiguras fig23;
-
+CFiguras fig24;
+CFiguras fig25;
 void saveFrame(void)
 {
 
@@ -2462,13 +2464,7 @@ void parque()
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
 	                                                  //AREA PARA JUEGO 1
-	glPushMatrix();
-	glTranslatef(-30, 0.1, 12);
-	glScalef(15, 0.1, 15);
-	glDisable(GL_LIGHTING);
-	fig3.prisma2(text4.GLindex, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
+	
 
 	//CAMINO DIVISORIO JUEGO 4 Y 5
 
@@ -2525,16 +2521,6 @@ void parque()
 	glPopMatrix();
 
 
-
-	                                                       //AREA JUEGO 5
-	 
-	glPushMatrix();
-	glTranslatef(24, 0.1, 40);
-	glScalef(10, 0.1, 10);
-	glDisable(GL_LIGHTING);
-	fig3.prisma2(text4.GLindex, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
 
 	
 }
@@ -2805,6 +2791,62 @@ void tienda3(void)
 	glPopMatrix();
 }
 
+
+void carrusel(void)
+{
+	glTranslatef(16, 0, 26);
+	glPushMatrix();
+	glTranslatef(8, 0.1, 20);
+	glScalef(10, 0.1, 10);
+	glDisable(GL_LIGHTING);
+	fig19.prisma3(text18.GLindex, 0); //textura carrusel piso
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//techo
+	
+	
+	glPushMatrix();
+	glTranslatef(10, 6, 22);
+	glRotatef(mundo, 0, 1, 0);
+	fig24.cono(2,7,100,0);
+	glPopMatrix();
+	//piso
+	glPushMatrix();
+	glTranslatef(10, 0.2, 22);
+	//glRotatef(180, 1, 0, 0);
+	glRotatef(mundo, 0, 1, 0);
+	fig24.cono(0.1, 7, 100, 0);
+	glPopMatrix();
+
+	//postes 
+	glPushMatrix();
+	glTranslatef(10, 0.1, 22);
+	//glRotatef(180, 1, 0, 0);
+	fig25.cilindro(0.3, 6, 100, 0);
+    glRotatef(mundo, 0, 1, 0);
+
+	glTranslatef(4, 0.1, -5);
+	fig25.cilindro(0.1, 6, 100, 0);
+	glTranslatef(-5, 0.1, -1);
+	fig25.cilindro(0.1, 6, 100, 0);
+	glTranslatef(-3, 0, 1);
+	fig25.cilindro(0.1, 6, 100, 0);
+	glTranslatef(-2, 0, 4);
+	fig25.cilindro(0.1, 6, 100, 0);
+	glTranslatef(1, 0, 5);
+	fig25.cilindro(0.1, 6, 100, 0);
+	glTranslatef(3, 0, 2);
+	fig25.cilindro(0.1, 6, 100, 0);
+	glTranslatef(4, 0, 0);
+	fig25.cilindro(0.1, 6, 100, 0);
+	glTranslatef(4, 0, -4);
+	fig25.cilindro(0.1, 6, 100, 0);
+
+
+	glPopMatrix();
+
+}
 
 
 GLuint createDL()
@@ -3330,6 +3372,8 @@ tienda2();
 baños();
 
 tienda3();
+
+carrusel();
 
 glPopMatrix();
 
