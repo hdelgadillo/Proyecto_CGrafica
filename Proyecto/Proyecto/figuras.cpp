@@ -233,14 +233,14 @@ void CFiguras::prisma2 (GLuint text, GLuint text2)  //Funcion creacion prisma
 			glTexCoord2f(1.0f, 1.0f); glVertex3fv(vertice[6]);
 			glTexCoord2f(0.0f, 1.0f); glVertex3fv(vertice[2]);
 		glEnd();
-
-		glBegin(GL_POLYGON);  //Bottom
+			glBegin(GL_POLYGON);  //Bottom
 			glNormal3f( 0.0f,-1.0f, 0.0f);
 			glTexCoord2f(0.0f, 0.0f); glVertex3fv(vertice[0]);
 			glTexCoord2f(1.0f, 0.0f); glVertex3fv(vertice[1]);
 			glTexCoord2f(1.0f, 1.0f); glVertex3fv(vertice[2]);
 			glTexCoord2f(0.0f, 1.0f); glVertex3fv(vertice[3]);
 		glEnd();
+	
 
 		glBindTexture(GL_TEXTURE_2D, text);   // choose the texture to use.
 		glBegin(GL_POLYGON);  //Top
@@ -250,6 +250,7 @@ void CFiguras::prisma2 (GLuint text, GLuint text2)  //Funcion creacion prisma
 			glTexCoord2f(0.0f, 1.0f); glVertex3fv(vertice[6]);
 			glTexCoord2f(0.0f, 0.0f); glVertex3fv(vertice[7]);
 		glEnd();
+		
 }
 void CFiguras::prisma3(GLuint text, GLuint text2)  //Funcion creacion prisma
 {

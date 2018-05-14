@@ -30,8 +30,14 @@ DWORD dwCurrentTime = 0;
 DWORD dwLastUpdateTime = 0;
 DWORD dwElapsedTime = 0;
 int juego;
-int juego1;
-int mundo;
+int juego1=0;
+int mundo; 
+float arriba = 0.0;
+float  arribaInc = 0.0;
+float horizontal = 0;
+float vertical = 1.24;
+float profundidad = -25;
+float giro = 0;
 
 
 typedef struct _frame
@@ -54,11 +60,24 @@ typedef struct _frame
 
 	float giroMonito;
 	float giroMonitoInc;
+	float  arriba=0.0;
+	float arribaInc = 0.0;
+
+	float horizontal = 0;
+	float vertical = 1.24;
+	float profundidad = -25;
+	float giro = 0;
+
+	float horizontalInc = 0;
+	float verticalInc = 0;
+	float profundidadInc = 0;
+	float giroInc = 0;
+
 
 }FRAME;
 
 FRAME KeyFrame[MAX_FRAMES];
-int FrameIndex = 0;			//introducir datos
+int FrameIndex = 20;			//introducir datos
 bool play = false;
 int playIndex = 0;
 
@@ -118,6 +137,7 @@ CTexture text22;
 CTexture text23;
 CTexture text24;
 CTexture text25;
+CTexture text26;
 
 				//NEW///////////////////////////7
 
@@ -1765,6 +1785,28 @@ void montana(void) {
 	glPopMatrix();
 }
 
+void carrito(void) {
+
+	glPushMatrix();
+
+
+
+	glPopMatrix();
+	glPushMatrix();
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0.1);
+	fig8.prisma2(text25.GLindex, text7.GLindex);
+	glDisable(GL_ALPHA_TEST);
+	glPopMatrix();
+
+
+
+
+
+	glPopMatrix();
+
+}
+
 
 void torreblanca(void) {
 
@@ -2969,10 +3011,39 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text24.LoadTGA("tienda3.tga");
 	text24.BuildGLTexture();
 	text24.ReleaseImage();
+
+	text25.LoadTGA("trans.tga");
+	text25.BuildGLTexture();
+	text25.ReleaseImage();
 	
 	//NEW////////////////////////////////////////////
+	KeyFrame[0].arriba = 0;
+	KeyFrame[0].horizontal = 0;
+	KeyFrame[0].vertical = 1.4;
+	KeyFrame[0].profundidad = -25;
+	KeyFrame[0].giro = 0;
 
+
+
+	KeyFrame[1].arriba = -8;
+	KeyFrame[1].horizontal = 26.2;
+	KeyFrame[1].vertical = 1.4;
+	KeyFrame[1].profundidad = -25;
+	KeyFrame[1].giro = 0;
+
+	KeyFrame[2].arriba = 0;
+	KeyFrame[2].horizontal = 26.2;
+	KeyFrame[2].vertical = 1.4;
+	KeyFrame[2].profundidad = -42;
+	KeyFrame[2].giro = 0;
+
+	KeyFrame[3].horizontal = 20;
+	KeyFrame[3].vertical = 1.4;
+	KeyFrame[3].profundidad = -42;
+	KeyFrame[3].giro = 0;
 	
+
+
 	//END NEW//////////////////////////////
 
 	objCamera.Position_Camera(0, 2.5f, 3, 0, 2.5f, 0, 0, 1, 0);
@@ -3187,7 +3258,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//conos con estrellas 
 	glPushMatrix();
 	glDisable(GL_LIGHTING);
-	glTranslatef(.5, 0, .4);
+	glTranslatef(.5, arriba, .4);
 	glScalef(2, 1, 2);
 glRotatef(-juego, 0, 1, 0);
 
@@ -3383,6 +3454,11 @@ montana();
 
 glPopMatrix();
 
+glPushMatrix();
+glTranslatef(horizontal, vertical, profundidad);
+carrito();
+glPopMatrix();
+
 	glPopMatrix();
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
@@ -3408,7 +3484,7 @@ void animacion()
 	if (dwElapsedTime >= 30)
 	{
 		juego = (juego - 11) % 360;
-		juego1 = (juego1 - 1) % 360;
+		
 		
 
 
@@ -3417,12 +3493,25 @@ void animacion()
 
 	fig3.text_izq -= 0.001;
 	fig3.text_der -= 0.001;
+
 	if (fig3.text_izq<-1)
 		fig3.text_izq = 0;
 	if (fig3.text_der<0)
 		fig3.text_der = 1;
 
+
 	//Movimiento del monito
+	
+
+	if (dwElapsedTime >= 30)
+	{
+		mundo = (mundo - 10) % 360;
+		dwLastUpdateTime = dwCurrentTime;
+		
+
+		
+	}
+
 	if (play)
 	{
 
@@ -3439,33 +3528,48 @@ void animacion()
 			{
 				i_curr_steps = 0; //Reset counter
 								  //Interpolation
-				interpolation();
+
+								  //Interpolaciones incremento.
+								  //el incremento es la distancia entre dos cuadros, el 2 - 1 y se divide entre el 90(i_max_steps)   Se hace la interpolacion
+
+
+				KeyFrame[playIndex].arribaInc = (KeyFrame[playIndex + 1].arriba - KeyFrame[playIndex].arriba) / i_max_steps;
+				KeyFrame[playIndex].horizontalInc = (KeyFrame[playIndex + 1].horizontal - KeyFrame[playIndex].horizontal) / i_max_steps;
+				KeyFrame[playIndex].verticalInc = (KeyFrame[playIndex + 1].vertical - KeyFrame[playIndex].vertical) / i_max_steps;
+				KeyFrame[playIndex].profundidadInc = (KeyFrame[playIndex + 1].profundidad- KeyFrame[playIndex].profundidad) / i_max_steps;
+				KeyFrame[playIndex].giroInc = (KeyFrame[playIndex + 1].giro - KeyFrame[playIndex].giro) / i_max_steps;
 
 			}
 		}
 		else
-		{
-			//Draw animation
-			posX += KeyFrame[playIndex].incX;
-			posY += KeyFrame[playIndex].incY;
-			posZ += KeyFrame[playIndex].incZ;
+		{	//Draw information
 
-			rotRodIzq += KeyFrame[playIndex].rotInc;
-			rotBrIzq += KeyFrame[playIndex].rotInc2;
-			rotBrDer += KeyFrame[playIndex].rotInc3;
-			rotRodDer += KeyFrame[playIndex].rotInc4;
-			giroMonito += KeyFrame[playIndex].giroMonitoInc;
+
+			arriba += KeyFrame[playIndex].arribaInc;
+			horizontal += KeyFrame[playIndex].horizontalInc;
+			vertical += KeyFrame[playIndex].verticalInc;
+			profundidad += KeyFrame[playIndex].profundidadInc;
+			giro += KeyFrame[playIndex].giroInc;
+
+
+
 
 			i_curr_steps++;
 		}
 
 	}
 
-	if (dwElapsedTime >= 30)
-	{
-		mundo = (mundo - 10) % 360;
-		dwLastUpdateTime = dwCurrentTime;
+	frame++;
+	time = glutGet(GLUT_ELAPSED_TIME);
+	if (time - timebase > 1000) {
+		sprintf(s, "FPS:%4.2f", frame*1000.0 / (time - timebase));
+		timebase = time;
+		frame = 0;
 	}
+
+
+
+
 
 	glutPostRedisplay();
 }
@@ -3524,12 +3628,26 @@ void keyboard(unsigned char key, int x, int y)  // Create Keyboard Function
 
 	case 'l':
 	case 'L':
-		if (play == false && (FrameIndex>1))
+		if (play == false && (FrameIndex > 1))
 		{
 
-			resetElements();
-			//First Interpolation				
-			interpolation();
+			arriba = KeyFrame[0].arriba;
+			horizontal = KeyFrame[0].horizontal;
+			vertical = KeyFrame[0].vertical;
+		     profundidad = KeyFrame[0].profundidad;
+			giro = KeyFrame[0].giro;
+			
+
+			//First Interpolation
+
+
+			KeyFrame[playIndex].arribaInc = (KeyFrame[playIndex + 1].arriba - KeyFrame[playIndex].arriba) / i_max_steps;
+			KeyFrame[playIndex].horizontalInc = (KeyFrame[playIndex + 1].horizontal - KeyFrame[playIndex].horizontal) / i_max_steps;
+			KeyFrame[playIndex].verticalInc = (KeyFrame[playIndex + 1].vertical - KeyFrame[playIndex].vertical) / i_max_steps;
+			KeyFrame[playIndex].profundidadInc = (KeyFrame[playIndex + 1].profundidad - KeyFrame[playIndex].profundidad) / i_max_steps;
+
+			KeyFrame[playIndex].giroInc = (KeyFrame[playIndex + 1].giro - KeyFrame[playIndex].giro) / i_max_steps;
+			//KeyFrame[playIndex].tije2Inc = (KeyFrame[playIndex + 1].tije2 - KeyFrame[playIndex].tije2) / i_max_steps;
 
 			play = true;
 			playIndex = 0;
@@ -3539,6 +3657,7 @@ void keyboard(unsigned char key, int x, int y)  // Create Keyboard Function
 		{
 			play = false;
 		}
+		break;
 		break;
 
 	case 'y':
