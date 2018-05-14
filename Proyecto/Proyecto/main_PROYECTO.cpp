@@ -1282,10 +1282,101 @@ void montana(void) {
 	glPopMatrix();
 
 	glPushMatrix();
-	glTranslatef(-23, 1, -16.56);
+	glTranslatef(-23.3, 1, -1);
 	glScalef(.9, .1, .1);
 	fig11.prisma3(text9.GLindex, text9.GLindex);
 	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -2);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -3);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -4);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -5);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -6);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -7);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -8);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -9);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -10);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -11);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -12);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -13);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -14);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -15);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23.3, 1, -16);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
 
 	glPopMatrix();//aqui termina el descenso
 
@@ -1521,63 +1612,153 @@ void montana(void) {
 	//soportes
 	glPushMatrix();
 	glTranslatef(0, 0, -.4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(0, 0, .4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(10, 0, -.4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(10, 0, .4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(-10, 0, -.4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(-10, 0, .4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(23, 0, -.4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(23, 0, .4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(-23, 0, -.4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(-23, 0, .4);
-	fig10.cilindro(.1, 1, 100, 0);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.6, 0, -2);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26, 0, -2);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.6, 0, -11);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26, 0, -11);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
 
 	glPopMatrix();
 
 
+	glPushMatrix();
+	glTranslatef(16, 0, -18);
+	fig10.cilindro(.1, 3.7, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(16, 0, -17.2);
+	fig10.cilindro(.1, 3.7, 100, text8.GLindex);
+	glPopMatrix();
 
 
+	glPushMatrix();
+	glTranslatef(14, 0, -18);
+	fig10.cilindro(.1, 7, 100, text8.GLindex);
+	glPopMatrix();
 
+	glPushMatrix();
+	glTranslatef(14, 0, -17.2);
+	fig10.cilindro(.1, 7, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(8, 0, -18);
+	fig10.cilindro(.1, 17, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(8, 0, -17.2);
+	fig10.cilindro(.1, 17, 100, text8.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(4, 0, -18);
+	fig10.cilindro(.1, 12, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(4, 0, -17.2);
+	fig10.cilindro(.1, 12, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-3, 0, -18);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-3, 0, -17.2);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-7, 0, -18);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-7, 0, -17.2);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-15, 0, -18);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-15, 0, -17.2);
+	fig10.cilindro(.1, 1, 100, text8.GLindex);
+	glPopMatrix();
 
 	glPopMatrix();
 }
@@ -3141,7 +3322,6 @@ glPopMatrix();//acaba skyscreamer
 //inicia montaña rusa
 glPushMatrix();
 
-montana();
 
 tienda1();
 
@@ -3150,6 +3330,12 @@ tienda2();
 baños();
 
 tienda3();
+
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(0,0,-25);
+montana();
 
 glPopMatrix();
 
