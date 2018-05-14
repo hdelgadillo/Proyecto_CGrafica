@@ -305,6 +305,716 @@ glPopMatrix();
 
 }
 
+void montana(void) {
+
+	glPushMatrix();
+
+	//rieles horizontales
+	glPushMatrix();
+	glTranslatef(-25, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-24, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-22, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-21, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-20, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-19, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-18, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-17, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-16, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-15, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-14, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-13, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-12, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-11, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-10, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-9, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-8, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-7, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-6, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-5, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-4, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-3, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-2, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(-1, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(1, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(2, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(3, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(4, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(5, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(6, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(7, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(8, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(9, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(10, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(11, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(12, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();
+	glTranslatef(13, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(14, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(15, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(16, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(17, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(18, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(19, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(20, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(21, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(22, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(23, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(24, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25, 1, 0);
+	glRotatef(90, 0, 1, 0);
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+	//hacia atras
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -2);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -3);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -4);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -5);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -6);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -7);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -8);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -9);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -10);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -11);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -12);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -13);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -14);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -15);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.3, 1, -16);
+
+	glScalef(.9, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+
+
+
+	//rieles largos
+	glPushMatrix();
+	glTranslatef(0, 1, .4);
+	glScalef(50, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 1, -.4);
+	glScalef(50, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();//giro
+	glPushMatrix();
+	glTranslatef(25.26, 1, .31);
+	glRotatef(20, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25.2, 1, -.5);
+	glRotatef(20, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25.65, 1, .1);
+	glRotatef(35, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25.6, 1, -.75);
+	glRotatef(45, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26, 1, -.2);
+	glRotatef(50, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25.8, 1, -1.11);
+	glRotatef(75, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.45, 1, -.86);
+	glRotatef(60, 0, 1, 0);
+	glScalef(1.1, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+
+	glPopMatrix();
+
+	//aqui termine el giro
+
+
+
+	glPushMatrix();
+	glTranslatef(25.86, 1, -8.8);
+	glRotatef(90, 0, 1, 0);
+	glScalef(15, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.7, 1, -8.8);
+	glRotatef(90, 0, 1, 0);
+	glScalef(15, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+	glPushMatrix();//giro
+	glTranslatef(26.3, 0, 8.7);
+	glRotatef(90,0, 1, 0);
+
+
+	glPushMatrix();
+	glTranslatef(25.26, 1, .31);
+	glRotatef(20, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25.2, 1, -.5);
+	glRotatef(20, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25.65, 1, .1);
+	glRotatef(35, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25.6, 1, -.75);
+	glRotatef(45, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26, 1, -.2);
+	glRotatef(50, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(25.8, 1, -1.11);
+	glRotatef(75, 0, 1, 0);
+	glScalef(.5, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(26.45, 1, -.86);
+	glRotatef(60, 0, 1, 0);
+	glScalef(1.1, .1, .1);
+	fig11.prisma3(text9.GLindex, text9.GLindex);
+	glPopMatrix();
+
+
+
+	glPopMatrix();
+	
+	//aqui termine el giro
+
+
+
+
+
+	//soportes
+	glPushMatrix();
+	glTranslatef(0, 0, -.4);
+	fig10.cilindro(.1, 1, 100, 0);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0,0,.4);
+	fig10.cilindro(.1, 1, 100, 0);
+
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(10, 0, -.4);
+	fig10.cilindro(.1, 1, 100, 0);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(10, 0, .4);
+	fig10.cilindro(.1, 1, 100, 0);
+
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-10, 0, -.4);
+	fig10.cilindro(.1, 1, 100, 0);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-10, 0, .4);
+	fig10.cilindro(.1, 1, 100, 0);
+
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(23, 0, -.4);
+	fig10.cilindro(.1, 1, 100, 0);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(23, 0, .4);
+	fig10.cilindro(.1, 1, 100, 0);
+
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23, 0, -.4);
+	fig10.cilindro(.1, 1, 100, 0);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-23, 0, .4);
+	fig10.cilindro(.1, 1, 100, 0);
+
+	glPopMatrix();
+
+
+
+	
+
+
+	glPopMatrix();
+}
+
 void torreblanca(void) {
 
 	glPushMatrix();
@@ -1502,6 +2212,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 	
 	// mundo
 	glPushMatrix();
+	glDisable(GL_LIGHTING);
 	glTranslatef(0.5, 29, .5);
 	glRotatef(360, 0, 1, 0);
 	glRotatef(mundo, 0.0, 1.0, 0.0);
@@ -1511,6 +2222,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 	
 	//conos con estrellas 
 	glPushMatrix();
+	glDisable(GL_LIGHTING);
 	glTranslatef(.5, 0, .4);
 	glScalef(2, 1, 2);
 glRotatef(-juego, 0, 1, 0);
@@ -1684,9 +2396,13 @@ glRotatef(-juego, 0, 1, 0);
 
 glPopMatrix();
 
+glPopMatrix();//acaba skyscreamer
+//inicia montaña rusa
+glPushMatrix();
 
+montana();
+glPopMatrix();
 
-	glPopMatrix();
 	glPopMatrix();
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
