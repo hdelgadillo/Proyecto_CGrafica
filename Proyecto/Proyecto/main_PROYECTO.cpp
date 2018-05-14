@@ -111,7 +111,10 @@ CTexture text15;
 CTexture text16;
 CTexture text17;
 CTexture text18;
-
+CTexture text19;
+CTexture text20;
+CTexture text21;
+CTexture text22;
 
 				//NEW///////////////////////////7
 
@@ -139,7 +142,8 @@ CFiguras fig16;
 CFiguras fig17;
 CFiguras fig18;
 CFiguras fig19;
-
+CFiguras fig20;
+CFiguras fig21;
 
 
 void saveFrame(void)
@@ -1787,135 +1791,274 @@ void parque()
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
 
-	                                                         //TIENDA 1
+	
+}
+
+void tienda1(void)
+{
 	//piso 
 	glPushMatrix();
 	glTranslatef(8, 0.1, 20);
 	glScalef(10, 0.1, 10);
 	glDisable(GL_LIGHTING);
-	fig10.prisma2(0, 0);
+	fig19.prisma3(text18.GLindex, 0);
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
 
-	//pared de atras (rojo)
-    glPushMatrix();
-	glTranslatef(4, 0.1, 20);
-	glScalef(0.1, 10, 10);
-	glColor3f(1, 0, 0);
+	//pared atras
+	glPushMatrix();
+	glTranslatef(3, 2.5, 20);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(10, 0.1, 5);
 	glDisable(GL_LIGHTING);
-	fig14.prisma2(0, 0);
+	fig17.prisma2(text19.GLindex, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	
+	//fachada
+	glPushMatrix();
+	glTranslatef(13, 2.5, 20);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(10, 0.1, 5);
+	glDisable(GL_LIGHTING);
+	fig17.prisma2(text20.GLindex, text20.GLindex);
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
 
-	//pared lateral (rosa)
+	//pared lateral 
 	glPushMatrix();
-	glTranslatef(8, 0.1, 25);
-	glScalef(10, 10, 0.1);
-	glColor3f(1, 0, 1);
+	glTranslatef(8, 2.5, 25);
+	glRotatef(90, 0, 0, 1);
+	glScalef(5, 10, 0.1);
 	glDisable(GL_LIGHTING);
-	fig14.prisma2(0, 0);
+	fig18.prisma3(0, text19.GLindex);
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
-                                                            //TIENDA 2
-	//piso 
+
+	//pared lateral
 	glPushMatrix();
-	glTranslatef(8, 0.1, 38);
+	glTranslatef(8, 2.5, 15);
+	glRotatef(90, 0, 1, 0);
+	glScalef(0.1, 5, 10);
+	glDisable(GL_LIGHTING);
+	fig18.prisma3(0, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//techo
+	glPushMatrix();
+	glTranslatef(8, 5, 20);
 	glScalef(10, 0.1, 10);
 	glDisable(GL_LIGHTING);
-	glColor3f(1, 1, 1);
-	fig15.prisma2(0, 0);
+	fig20.prisma3(text21.GLindex, 0);
 	glEnable(GL_LIGHTING);
-	glPopMatrix();
-
-	//pared de atras //pared de atras (rojo)
-	glPushMatrix();
-	glTranslatef(4, 0.1, 38);
-	glScalef(0.1, 10, 10);
-	glColor3f(1, 0, 0);
-	glDisable(GL_LIGHTING);
-	fig14.prisma2(0, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
-	                
-
-	//pared lateral (negro)
-	glPushMatrix();
-	glTranslatef(8, 0.1, 33);
-	glScalef(10, 10, 0.1);
-	glColor3f(0, 0, 0);
-	glDisable(GL_LIGHTING);
-	fig14.prisma2(0, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
-	                                                        //COMIDA
-
-	//piso 
-	glPushMatrix();
-	glTranslatef(-8, 0.1, 38);
-	glScalef(10, 0.1, 10);
-	glColor3f(1, 1, 1);
-	glDisable(GL_LIGHTING);
-	fig10.prisma2(0, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
-
-	//pared de atras //pared de atras (rojo)
-	glPushMatrix();
-	glTranslatef(-4, 0.1, 38);
-	glScalef(0.1, 10, 10);
-	glColor3f(1, 0, 0);
-	glDisable(GL_LIGHTING);
-	fig14.prisma2(0, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
-
-
-	//pared lateral (negro)
-	glPushMatrix();
-	glTranslatef(-8, 0.1, 33);
-	glScalef(10, 10, 0.1);
-	glColor3f(0, 0, 0);
-	glDisable(GL_LIGHTING);
-	fig14.prisma2(0, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
-
-
-	                                                        //BAÑOS
-
-	//piso 
-	glPushMatrix();
-	glTranslatef(-8, 0.1, 20);
-	glScalef(10, 0.1, 10);
-	glDisable(GL_LIGHTING);
-	glColor3f(1, 1, 1);
-	fig10.prisma2(0, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
-
-	//pared de atras (rojo)
-	glPushMatrix();
-	glTranslatef(-4, 0.1, 20);
-	glScalef(0.1, 10, 10);
-	glColor3f(1, 0, 0);
-	glDisable(GL_LIGHTING);
-	fig14.prisma2(0, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
-
-	//pared lateral (rosa)
-	glPushMatrix();
-	glTranslatef(-8, 0.1, 25);
-	glScalef(10, 10, 0.1);
-	glColor3f(1, 0, 1);
-	glDisable(GL_LIGHTING);
-	fig14.prisma2(0, 0);
-	glEnable(GL_LIGHTING);
-	glPopMatrix();
-
+	glPopMatrix(); 
 }
 
+void tienda2(void)
+{
+	glTranslatef(0,0.1,20);
+glPushMatrix();
+	//piso 
+	glPushMatrix();
+	glTranslatef(8, 0.1, 20);
+	glScalef(10, 0.1, 10);
+	glDisable(GL_LIGHTING);
+	fig19.prisma3(text18.GLindex, 0);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
 
+	//pared atras
+	glPushMatrix();
+	glTranslatef(3, 2.5, 20);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(10, 0.1, 5);
+	glDisable(GL_LIGHTING);
+	fig17.prisma2(text19.GLindex, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//fachada
+	glPushMatrix();
+	glTranslatef(13, 2.5, 20);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(10, 0.1, 5);
+	glDisable(GL_LIGHTING);
+	fig21.prisma2(text22.GLindex, text22.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//pared lateral 
+	glPushMatrix();
+	glTranslatef(8, 2.5, 25);
+	glRotatef(90, 0, 0, 1);
+	glScalef(5, 10, 0.1);
+	glDisable(GL_LIGHTING);
+	fig18.prisma3(0, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//pared lateral
+	glPushMatrix();
+	glTranslatef(8, 2.5, 15);
+	glRotatef(90, 0, 1, 0);
+	glScalef(0.1, 5, 10);
+	glDisable(GL_LIGHTING);
+	fig18.prisma3(0, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//techo
+	glPushMatrix();
+	glTranslatef(8, 5, 20);
+	glScalef(10, 0.1, 10);
+	glDisable(GL_LIGHTING);
+	fig20.prisma3(text21.GLindex, 0);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+glPopMatrix();
+}
+
+void baños(void)
+{
+	glTranslatef(0, 0.1, 20);
+	glRotatef(180,0,1,0);
+	glPushMatrix();
+	//piso 
+	glPushMatrix();
+	glTranslatef(8, 0.1, 20);
+	glScalef(10, 0.1, 10);
+	glDisable(GL_LIGHTING);
+	fig19.prisma3(text18.GLindex, 0);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//pared atras
+	glPushMatrix();
+	glTranslatef(3, 2.5, 20);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(10, 0.1, 5);
+	glDisable(GL_LIGHTING);
+	fig17.prisma2(text19.GLindex, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//fachada
+	glPushMatrix();
+	glTranslatef(13, 2.5, 20);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(10, 0.1, 5);
+	glDisable(GL_LIGHTING);
+	fig21.prisma2(text22.GLindex, text22.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//pared lateral 
+	glPushMatrix();
+	glTranslatef(8, 2.5, 25);
+	glRotatef(90, 0, 0, 1);
+	glScalef(5, 10, 0.1);
+	glDisable(GL_LIGHTING);
+	fig18.prisma3(0, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//pared lateral
+	glPushMatrix();
+	glTranslatef(8, 2.5, 15);
+	glRotatef(90, 0, 1, 0);
+	glScalef(0.1, 5, 10);
+	glDisable(GL_LIGHTING);
+	fig18.prisma3(0, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//techo
+	glPushMatrix();
+	glTranslatef(8, 5, 20);
+	glScalef(10, 0.1, 10);
+	glDisable(GL_LIGHTING);
+	fig20.prisma3(text21.GLindex, 0);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	glPopMatrix();
+}
+
+void tienda3(void)
+{
+	glTranslatef(0, 0.1, -20);
+	glRotatef(360, 0, 1, 0);
+	glPushMatrix();
+	//piso 
+	glPushMatrix();
+	glTranslatef(8, 0.1, 20);
+	glScalef(10, 0.1, 10);
+	glDisable(GL_LIGHTING);
+	fig19.prisma3(text18.GLindex, 0);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//pared atras
+	glPushMatrix();
+	glTranslatef(3, 2.5, 20);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(10, 0.1, 5);
+	glDisable(GL_LIGHTING);
+	fig17.prisma2(text19.GLindex, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//fachada
+	glPushMatrix();
+	glTranslatef(13, 2.5, 20);
+	glRotatef(90, 0, 0, 1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(10, 0.1, 5);
+	glDisable(GL_LIGHTING);
+	fig21.prisma2(text22.GLindex, text22.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//pared lateral 
+	glPushMatrix();
+	glTranslatef(8, 2.5, 25);
+	glRotatef(90, 0, 0, 1);
+	glScalef(5, 10, 0.1);
+	glDisable(GL_LIGHTING);
+	fig18.prisma3(0, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//pared lateral
+	glPushMatrix();
+	glTranslatef(8, 2.5, 15);
+	glRotatef(90, 0, 1, 0);
+	glScalef(0.1, 5, 10);
+	glDisable(GL_LIGHTING);
+	fig18.prisma3(0, text19.GLindex);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	//techo
+	glPushMatrix();
+	glTranslatef(8, 5, 20);
+	glScalef(10, 0.1, 10);
+	glDisable(GL_LIGHTING);
+	fig20.prisma3(text21.GLindex, 0);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+
+	glPopMatrix();
+}
 
 
 
@@ -2011,8 +2154,26 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text13.BuildGLTexture();
 	text13.ReleaseImage();
 
-	
+	text18.LoadTGA("ladrillo.tga");
+	text18.BuildGLTexture();
+	text18.ReleaseImage();
 
+	
+	text19.LoadTGA("ladrillo.tga");
+	text19.BuildGLTexture();
+	text19.ReleaseImage();
+
+	text20.LoadTGA("facha.tga");
+	text20.BuildGLTexture();
+	text20.ReleaseImage();
+
+	text21.LoadTGA("techo.tga");
+	text21.BuildGLTexture();
+	text21.ReleaseImage();
+
+	text22.LoadTGA("tienda2.tga");
+	text22.BuildGLTexture();
+	text22.ReleaseImage();
 	
 	//NEW////////////////////////////////////////////
 
@@ -2063,6 +2224,10 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glLoadIdentity();
+
+
+
+
 	glPushMatrix();
 
 
@@ -2099,6 +2264,10 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
 	glColor3f(1.0, 1.0, 1.0);
+
+
+
+	
 
 	//aqui empieza torre
 	glPushMatrix();
@@ -2401,6 +2570,15 @@ glPopMatrix();//acaba skyscreamer
 glPushMatrix();
 
 montana();
+
+tienda1();
+
+tienda2();
+
+baños();
+
+tienda3();
+
 glPopMatrix();
 
 	glPopMatrix();
