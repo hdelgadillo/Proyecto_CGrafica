@@ -1,11 +1,4 @@
-//Semestre 2018-2
-//************************************************************//
-//************************************************************//
-//************** Alumno (s):Delgadillo Cortez Hugo*********************************//
-//*************				Leonel Macario Falcon							******//
-//*************		Version de Visual studio 2017									******//
-//************************************************************//
-//************************************************************//
+
 
 #include "texture.h"
 #include "figuras.h"
@@ -33,6 +26,7 @@ int juego;
 int juego1=0;
 int mundo; 
 float arriba = 0.0;
+
 float  arribaInc = 0.0;
 float horizontal = 0;
 float vertical = 1.24;
@@ -216,6 +210,9 @@ void interpolation(void)
 	KeyFrame[playIndex].giroMonitoInc = (KeyFrame[playIndex + 1].giroMonito - KeyFrame[playIndex].giroMonito) / i_max_steps;
 
 }
+
+
+
 
 void torreroja(void) {
 
