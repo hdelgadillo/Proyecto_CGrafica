@@ -132,6 +132,12 @@ CTexture text23;
 CTexture text24;
 CTexture text25;
 CTexture text26;
+CTexture text27;
+
+//MODELOS
+CModel horse; 
+CModel cow;
+CModel tree;
 
 				//NEW///////////////////////////7
 
@@ -165,6 +171,7 @@ CFiguras fig22;
 CFiguras fig23;
 CFiguras fig24;
 CFiguras fig25;
+CFiguras fig26; //circo
 void saveFrame(void)
 {
 
@@ -2838,7 +2845,7 @@ void carrusel(void)
 	glTranslatef(8, 0.1, 20);
 	glScalef(10, 0.1, 10);
 	glDisable(GL_LIGHTING);
-	fig19.prisma3(text18.GLindex, 0); //textura carrusel piso
+	fig19.prisma3(text4.GLindex, 0); //textura carrusel piso
 	glEnable(GL_LIGHTING);
 	glPopMatrix();
 
@@ -2848,43 +2855,192 @@ void carrusel(void)
 	glPushMatrix();
 	glTranslatef(10, 6, 22);
 	glRotatef(mundo, 0, 1, 0);
-	fig24.cono(2,7,100,0);
+	fig24.cono(2,7,100, text26.GLindex);
 	glPopMatrix();
 	//piso
 	glPushMatrix();
 	glTranslatef(10, 0.2, 22);
 	//glRotatef(180, 1, 0, 0);
-	glRotatef(mundo, 0, 1, 0);
-	fig24.cono(0.1, 7, 100, 0);
+	glRotatef(mundo*0.2, 0, 1, 0);
+	fig24.cono(0.1, 7, 100, text27.GLindex);
 	glPopMatrix();
 
 	//postes 
 	glPushMatrix();
 	glTranslatef(10, 0.1, 22);
 	//glRotatef(180, 1, 0, 0);
-	fig25.cilindro(0.3, 6, 100, 0);
-    glRotatef(mundo, 0, 1, 0);
+	fig25.cilindro(0.3, 6, 100, text27.GLindex);
+	glRotatef(mundo*0.2, 0, 1, 0);
 
 	glTranslatef(4, 0.1, -5);
-	fig25.cilindro(0.1, 6, 100, 0);
+	fig25.cilindro(0.1, 6, 100, text3.GLindex);
+	//horse
+	glPushMatrix();
+	glTranslatef(-8.5, 2,5.5);
+	glScalef(0.01, 0.01, 0.01);;
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse
+
 	glTranslatef(-5, 0.1, -1);
-	fig25.cilindro(0.1, 6, 100, 0);
+	fig25.cilindro(0.1, 6, 100, text3.GLindex);
+		//horse
+	glPushMatrix();
+	glTranslatef(-4, 2,5);
+	glScalef(0.01, 0.01, 0.01);;
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse
+
 	glTranslatef(-3, 0, 1);
-	fig25.cilindro(0.1, 6, 100, 0);
+	fig25.cilindro(0.1, 6, 100, text3.GLindex);
+	/*//horse
+	glPushMatrix();
+	glTranslatef(-8.5, 2, 5.5);
+	glScalef(0.01, 0.01, 0.01);;
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse*/
+
 	glTranslatef(-2, 0, 4);
-	fig25.cilindro(0.1, 6, 100, 0);
+	fig25.cilindro(0.1, 6, 100, text3.GLindex);
+	/*//horse
+	glPushMatrix();
+	glTranslatef(-8.5, 2, 5.5);
+	glScalef(0.01, 0.01, 0.01);;
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse*/
+
 	glTranslatef(1, 0, 5);
-	fig25.cilindro(0.1, 6, 100, 0);
+	fig25.cilindro(0.1, 6, 100, text3.GLindex);
+	/*//horse
+	glPushMatrix();
+	glTranslatef(-8.5, 2, 5.5);
+	glScalef(0.01, 0.01, 0.01);;
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse*/
+
 	glTranslatef(3, 0, 2);
-	fig25.cilindro(0.1, 6, 100, 0);
+	fig25.cilindro(0.1, 6, 100, text3.GLindex);
+	/*//horse
+	glPushMatrix();
+	glTranslatef(-8.5, 2, 5.5);
+	glScalef(0.01, 0.01, 0.01);;
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse*/
+
 	glTranslatef(4, 0, 0);
-	fig25.cilindro(0.1, 6, 100, 0);
+	fig25.cilindro(0.1, 6, 100, text3.GLindex);
+	/*//horse
+	glPushMatrix();
+	glTranslatef(-8.5, 2, 5.5);
+	glScalef(0.01, 0.01, 0.01);;
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse*/
+
 	glTranslatef(4, 0, -4);
-	fig25.cilindro(0.1, 6, 100, 0);
+	fig25.cilindro(0.1, 6, 100, text3.GLindex);
+	/*//horse
+	glPushMatrix();
+	glTranslatef(-8.5, 2, 5.5);
+	glScalef(0.01, 0.01, 0.01);;
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse*/
 
 
 	glPopMatrix();
 
+}
+void corral(void) {
+
+	//horse
+	glPushMatrix();
+	glTranslatef(-37.5,1,20 );
+	glScalef(0.006, 0.006, 0.006);
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse
+
+	//cow
+	glPushMatrix();
+	glTranslatef(-35.9,-0.3, 20);
+	glScalef(0.002, 0.002, 0.002);
+	cow.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//cow
+
+	//horse
+	glPushMatrix();
+	glTranslatef(-33.5, 1, 18);
+	glRotatef(180, 0, 1, 0);
+	glScalef(0.006, 0.006, 0.006);
+	horse.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//horse
+
+	//cow
+	glPushMatrix();
+	glTranslatef(-35.9,-0.3, 18);
+	glRotatef(180, 0, 1, 0);
+	glScalef(0.002, 0.002, 0.002);
+	cow.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//cow
+
+	//cow--
+	glPushMatrix();
+	glTranslatef(-40, -0.3, 17);
+	glScalef(0.002, 0.002, 0.002);
+	cow.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//cow
+	//cow
+	glPushMatrix();
+	glTranslatef(-40, -0.3, 19);
+	glRotatef(180, 0, 1, 0);
+	glScalef(0.002, 0.002, 0.002);
+	cow.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//cow
+	//cow
+	glPushMatrix();
+	glTranslatef(-40, -0.3, 21);
+	glScalef(0.002, 0.002, 0.002);
+	cow.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//cow
+
+
+
+}
+
+void flora(void) {
+
+	///*
+	glPushMatrix();
+	glTranslatef(-5, -1,2 );
+	//glScalef(0.01, 0.01, 0.01);
+	tree.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//tree
+
+	glPushMatrix();
+	glTranslatef(-15, -1, 12);
+	//glScalef(0.01, 0.01, 0.01);
+	tree.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//tree
+
+	glPushMatrix();
+	glTranslatef(-25, -1, 2);
+	//glScalef(0.01, 0.01, 0.01);
+	tree.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//tree
+
+	
+
+
+	glPushMatrix();
+	glTranslatef(-25, -1,30 );
+	//glScalef(0.01, 0.01, 0.01);
+	tree.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//tree
+
+	glPushMatrix();
+	glTranslatef(-5, -1, 30);
+	//glScalef(0.01, 0.01, 0.01);
+	tree.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//tree
+
+	//*/
 }
 
 
@@ -2929,8 +3085,9 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	glEnable(GL_AUTO_NORMAL);
 	glEnable(GL_NORMALIZE);
 
+	// TEXTURAS 
 
-	text1.LoadBMP("sky.bmp");
+	text1.LoadBMP("sky3.bmp");
 	text1.BuildGLTexture();
 	text1.ReleaseImage();
 
@@ -2940,7 +3097,7 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text3.BuildGLTexture();
 	text3.ReleaseImage();
 
-	text4.LoadTGA("city/pavimento.tga");
+	text4.LoadTGA("piso.tga");
 	text4.BuildGLTexture();
 	text4.ReleaseImage();
 
@@ -3012,6 +3169,14 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	text25.LoadTGA("trans.tga");
 	text25.BuildGLTexture();
 	text25.ReleaseImage();
+
+	text26.LoadTGA("circo.tga");
+	text26.BuildGLTexture();
+	text26.ReleaseImage();
+
+	text27.LoadTGA("circo2.tga");
+	text27.BuildGLTexture();
+	text27.ReleaseImage();
 	
 	//NEW////////////////////////////////////////////
 	KeyFrame[0].arriba = 0;
@@ -3039,6 +3204,10 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	KeyFrame[3].profundidad = -42;
 	KeyFrame[3].giro = 0;
 	
+	//MODELOS
+	horse._3dsLoad("horse.3ds");
+	cow._3dsLoad("cow.3ds");
+	tree._3dsLoad("tree.3ds");
 
 
 	//END NEW//////////////////////////////
@@ -3443,11 +3612,14 @@ tienda3();
 
 carrusel();
 
+corral();
+flora();
 glPopMatrix();
 
 glPushMatrix();
 glTranslatef(0,0,-25);
 montana();
+
 
 glPopMatrix();
 
@@ -3460,7 +3632,7 @@ glPopMatrix();
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
 	glColor3f(1.0, 0.0, 0.0);
-	pintaTexto(-11, 12.0, -14.0, (void *)font, "Six Flags");
+	pintaTexto(-11, 12.0, -14.0, (void *)font, "FERIA DEL CABALLO");
 	pintaTexto(-11, 8.5, -14, (void *)font, s);
 	glColor3f(1.0, 1.0, 1.0);
 	glEnable(GL_LIGHTING);
@@ -3724,6 +3896,35 @@ void keyboard(unsigned char key, int x, int y)  // Create Keyboard Function
 
 	case 'O':
 		rotBrDer--;
+		break;
+	case '1'://camara1
+		objCamera.mPos.x = -60.00;
+		objCamera.mPos.y = 0.50;
+		objCamera.mPos.z = -70.00;
+		objCamera.mView.x = -60.00;
+		objCamera.mView.y = 0.0;
+		objCamera.mView.z = -80.00;
+		g_lookupdown = 0.00;
+		break;
+		//camara2
+	case '2':
+		objCamera.mPos.x = 70.00;
+		objCamera.mPos.y = 0.50;
+		objCamera.mPos.z = -70.00;
+		objCamera.mView.x = 70.00;
+		objCamera.mView.y = 0.50;
+		objCamera.mView.z = 0.00;//-150.50;
+		g_lookupdown = 1.00;
+		break;
+		//camara3
+	case '3':
+		objCamera.mPos.x = 11.00;
+		objCamera.mPos.y = 4.500;
+		objCamera.mPos.z = -13.45;
+		objCamera.mView.x = 0.00;
+		objCamera.mView.y = 4.25;
+		objCamera.mView.z = -20.50;
+		g_lookupdown = 1.00;
 		break;
 	case 27:        // Cuando Esc es presionado...
 		exit(0);   // Salimos del programa
