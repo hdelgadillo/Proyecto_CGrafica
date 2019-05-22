@@ -3,6 +3,8 @@
 #include "texture.h"
 #include "figuras.h"
 #include "Camera.h"
+#include "MMSystem.h"
+#include "Windows.h"
 
 #include "cmodel/CModel.h"
 
@@ -2770,6 +2772,16 @@ void baños(void)
 	glPopMatrix();
 }
 
+void musica1() {
+	PlaySound(TEXT("feria.wav"), NULL, SND_LOOP | SND_ASYNC);
+
+}
+
+void musica2() {
+	PlaySound(TEXT("vaca.wav"), NULL, SND_ASYNC);
+
+}
+
 void tienda3(void)
 {
 	glTranslatef(0, 0.1, -20);
@@ -2949,7 +2961,8 @@ void carrusel(void)
 	glPopMatrix();
 
 }
-void corral(void) {
+void corral() {
+
 
 	//horse
 	glPushMatrix();
@@ -3415,6 +3428,9 @@ GLuint createDL()
 	return(ciudadDL);
 }
 
+
+bool	light = false;
+
 void InitGL(GLvoid)     // Inicializamos parametros
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);				// Negro de fondo	
@@ -3611,9 +3627,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 
 
 
-
 	glPushMatrix();
-
 
 	glRotatef(g_lookupdown, 1.0f, 0, 0);
 
@@ -3948,11 +3962,10 @@ glRotatef(-juego, 0, 1, 0);
 	
 
 glPopMatrix();
-
 glPopMatrix();//acaba skyscreamer
 //inicia montaña rusa
-glPushMatrix();
 
+glPushMatrix();
 
 tienda1();
 
@@ -3978,6 +3991,7 @@ glPopMatrix();
 glPushMatrix();
 glTranslatef(horizontal, vertical, profundidad);
 carrito();
+
 glPopMatrix();
 
 	glPopMatrix();
@@ -3989,6 +4003,7 @@ glPopMatrix();
 	glColor3f(1.0, 1.0, 1.0);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_TEXTURE_2D);
+
 
 	glutSwapBuffers();
 
@@ -4278,9 +4293,25 @@ void keyboard(unsigned char key, int x, int y)  // Create Keyboard Function
 		objCamera.mView.z = -20.50;
 		g_lookupdown = 1.00;
 		break;
+	case 't':
+	case 'T':
+		PlaySound(TEXT("feria.wav"), NULL, SND_SYNC);
+		break;
+
+	case '5':
+		objCamera.mPos.x = -50.00;
+		objCamera.mPos.y = -5.500;
+		objCamera.mPos.z = -50.45;
+		objCamera.mView.x = 0.00;
+		objCamera.mView.y = 4.25;
+		objCamera.mView.z = -20.50;
+		g_lookupdown = 1.00;
+		break;
 	case 27:        // Cuando Esc es presionado...
 		exit(0);   // Salimos del programa
 		break;
+	
+	
 	default:        // Cualquier otra
 		break;
 	}
