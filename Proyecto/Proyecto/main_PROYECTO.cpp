@@ -138,6 +138,7 @@ CTexture text27;
 CModel horse; 
 CModel cow;
 CModel tree;
+CModel reja;
 
 				//NEW///////////////////////////7
 
@@ -3000,13 +3001,359 @@ void corral(void) {
 	cow.GLrender(NULL, _SHADED, 1.0);
 	glPopMatrix();//cow
 
+		//reja 
+	//enfrente 
+	glPushMatrix();
+	glTranslatef(-34, 0, 20);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
 
+	glPushMatrix();
+	glTranslatef(-34, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(0, 1, 1);
+	glTranslatef(-34, 0, 19);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 18);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 17);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 16);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 15);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 14);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 13);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 12);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 11);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-34, 0, 10);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	//atras
+	glPushMatrix();
+	glTranslatef(-45, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-45, 0, 24);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(0, 1, 1);
+	glTranslatef(-45, 0, 23);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(0, 1, 1);
+	glTranslatef(-45, 0, 19);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(0, 1, 1);
+	glTranslatef(-45, 0, 22);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(0, 1, 1);
+	glTranslatef(-45, 0, 21);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(0, 1, 1);
+	glTranslatef(-45, 0, 20);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(0, 1, 1);
+	glTranslatef(-45, 0, 19);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 18);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 17);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 16);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 15);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 14);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 13);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 12);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 11);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+	glPushMatrix();
+	glColor3f(1, 1, 1);
+	glTranslatef(-45, 0, 10);
+	glScalef(0.01, 0.01, 0.01);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	//derecho
+
+	glPushMatrix();
+	glTranslatef(-34, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-35, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-36, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-37, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-38, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-39, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-40, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-41, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-42, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-43, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-44, 0, 9);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	//izquierdo
+
+	glPushMatrix();
+	glTranslatef(-34, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-35, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-36, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-37, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-38, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-39, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-40, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-41, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-42, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-43, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
+
+	glPushMatrix();
+	glTranslatef(-44, 0, 25);
+	glScalef(0.01, 0.01, 0.01);
+	glRotatef(180, 1, 0, 1);
+	reja.GLrender(NULL, _SHADED, 1.0);
+	glPopMatrix();//reja
 
 }
 
 void flora(void) {
 
-	///*
+	/*
 	glPushMatrix();
 	glTranslatef(-5, -1,2 );
 	//glScalef(0.01, 0.01, 0.01);
@@ -3040,7 +3387,11 @@ void flora(void) {
 	tree.GLrender(NULL, _SHADED, 1.0);
 	glPopMatrix();//tree
 
-	//*/
+	*/
+
+
+
+
 }
 
 
@@ -3208,6 +3559,7 @@ void InitGL(GLvoid)     // Inicializamos parametros
 	horse._3dsLoad("horse.3ds");
 	cow._3dsLoad("cow.3ds");
 	tree._3dsLoad("tree.3ds");
+	reja._3dsLoad("reja.3ds");
 
 
 	//END NEW//////////////////////////////
